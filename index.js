@@ -4,30 +4,49 @@ var endpoints = {
     'director': "http://netflixroulette.net/api/api.php?director="
 };
 
-
+var titleUndefinedError = new Error("title is not an optional parameter");
+var titleNotStringError = new TypeError("title is not of type string");
 
 // API functions (entry-points of this module)
 module.exports = {
-    title: function(title, year, callback) {
-        // TODO: Error checking: title must be defined, title must be string,
-        //       year must be int.
+    title: function(title, year) {
+        // Error check: title must be defined
+        if (title === undefined) {
+            throw titleUndefinedError;
+            return null;
+        }
 
+        // Error check: title must be string
+        if (typeof title !== 'string') {
+            throw titleNotStringError;
+            return null;
+        }
 
+        // Encode title for request URL
         encodedTitle = encodeCallParameters(title);
+        // Create final NetflixRoulette request URL
         requestURL = endpoints.title + encodedTitle;
 
+        // If user defines year, it must be added to request URL
         if (year !== undefined) {
+            // Error check: year must be number
+            if (typeof year !== 'number') {
+                throw yearNotNumberError;
+                return null;
+            }
+
+            // Append year parameter to URL
             requestURL = requestURL + '&year=' + parseInt(year, 10);
         }
 
         return requestURL;
     }
 
-    // actor: function(actor, callback) {
+    // actor: function(actor) {
 
     // }
 
-    // director: function(director, callback) {
+    // director: function(director) {
 
     // }
 }
