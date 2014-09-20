@@ -4,8 +4,15 @@ var endpoints = {
     'director': "http://netflixroulette.net/api/api.php?director="
 };
 
-var titleUndefinedError = new Error("title is not an optional parameter");
-var titleNotStringError = new TypeError("title is not of type string");
+var titleUndefinedError = new Error("title must be defined");
+var titleNotStringError = new TypeError("title must be of type string");
+var yearNotNumberError = new TypeError("year must be of type number");
+
+var actorUndefinedError = new Error("actor must be defined");
+var actorNotStringError = new TypeError("actor must be of type string");
+
+var directorUndefinedError = new Error("director must be defined");
+var directorNotStringError = new TypeError("director must be of type string");
 
 // API functions (entry-points of this module)
 module.exports = {
@@ -40,16 +47,50 @@ module.exports = {
         }
 
         return requestURL;
+    },
+
+    actor: function(actor) {
+        // Error check: actor must be defined
+        if (actor === undefined) {
+            throw actorUndefinedError;
+            return null;
+        }
+
+        // Error check: actor must be string
+        if (typeof actor !== 'string') {
+            throw actorNotStringError;
+            return null;
+        }
+
+        // Encode actor for request URL
+        encodedActor = encodeCallParameters(actor);
+        // Create final NetflixRoulette request URL
+        requestURL = endpoints.actor + encodedActor;
+
+        return requestURL;
+    },
+
+    director: function(director) {
+        // Error check: director must be defined
+        if (director === undefined) {
+            throw directorUndefinedError;
+            return null;
+        }
+
+        // Error check: director must be string
+        if (typeof director !== 'string') {
+            throw directorNotStringError;
+            return null;
+        }
+
+        // Encode director for request URL
+        encodedDirector = encodeCallParameters(director);
+        // Create final NetflixRoulette request URL
+        requestURL = endpoints.director + encodedDirector;
+
+        return requestURL;
     }
-
-    // actor: function(actor) {
-
-    // }
-
-    // director: function(director) {
-
-    // }
-}
+};
 
 function encodeCallParameters(searchString) {
     var querystring = require('querystring');
