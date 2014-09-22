@@ -1,0 +1,28 @@
+{
+  "name": "NetflixRoulette",
+  "version": "0.1.0",
+  "description": "NetflixRoulette API Wrapper Module",
+  "author": ["Antriksh Yadav <antrikshy@gmail.com> (http://antrikshy.com"],
+
+  "homepage": "https://github.com/Antrikshy/NetflixRoulette_Node/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Antrikshy/NetflixRoulette_Node"
+  },
+  "bugs": {
+    "url" : "https://github.com/Antrikshy/NetflixRoulette_Node/issues"
+  },
+
+  "main": "./main.js",
+
+  "dependencies": {
+    "request": "^2.44.0",
+  },
+
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ]
+}
