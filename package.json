@@ -1,22 +1,22 @@
 {
-  "name": "NetflixRoulette",
-  "version": "0.1.0",
+  "name": "netflix-roulette",
+  "version": "1.0.0",
   "description": "NetflixRoulette API Wrapper Module",
   "author": ["Antriksh Yadav <antrikshy@gmail.com> (http://antrikshy.com"],
 
-  "homepage": "https://github.com/Antrikshy/NetflixRoulette_Node/",
+  "homepage": "https://github.com/Antrikshy/NetflixRouletteNodeJS/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Antrikshy/NetflixRoulette_Node"
+    "url": "https://github.com/Antrikshy/NetflixRouletteNodeJS"
   },
   "bugs": {
-    "url" : "https://github.com/Antrikshy/NetflixRoulette_Node/issues"
+    "url" : "https://github.com/Antrikshy/NetflixRouletteNodeJS/issues"
   },
 
-  "main": "./main.js",
+  "main": "./lib/main.js",
 
   "dependencies": {
-    "request": "^2.44.0",
+    "request": "^2.44.0"
   },
 
   "licenses": [
@@ -24,5 +24,16 @@
       "type": "MIT",
       "url": "http://opensource.org/licenses/MIT"
     }
+  ],
+
+  "keywords": [
+    "netflix",
+    "roulette",
+    "api",
+    "database",
+    "movies",
+    "tv",
+    "actor",
+    "director"
   ]
 }
