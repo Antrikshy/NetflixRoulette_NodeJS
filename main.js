@@ -69,7 +69,9 @@ module.exports = {
         // Create final NetflixRoulette request URL
         requestURL = endpoints.actor + encodedActor;
 
-        getJSON(requestURL);
+        getJSON(requestURL, function(error, data) {
+            parentCallback(error, data);
+        });
     },
 
     director: function(director, parentCallback) {
@@ -90,13 +92,14 @@ module.exports = {
         // Create final NetflixRoulette request URL
         requestURL = endpoints.director + encodedDirector;
 
-        getJSON(requestURL);
+        getJSON(requestURL, function(error, data) {
+            parentCallback(error, data);
+        });
     }
 };
 
 function getJSON(requestURL, callback) {
     var request = require('request');
-        console.log(requestURL)
         request({
             url: requestURL,
             json: true
