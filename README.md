@@ -34,4 +34,6 @@ Refer to [NetflixRoulette's API guide](http://netflixroulette.net/api/) for deta
 Contact
 -------
 
-Report any bugs from the [Issues section](https://github.com/Antrikshy/NetflixRoulette_NodeJS/issues). If you have any questions, contact me [@Antrikshy](http://twitter.com/Antrikshy). You can reach, Andrew, the developer of NetflixRoulette [@CodeusaSoftware](https://twitter.com/codeusasoftware).
+Report any bugs from the [Issues section](https://github.com/Antrikshy/NetflixRoulette_NodeJS/issues).
+
+If you have any questions, contact me [@Antrikshy](http://twitter.com/Antrikshy). You can reach, Andrew, the developer of NetflixRoulette [@CodeusaSoftware](https://twitter.com/codeusasoftware).
