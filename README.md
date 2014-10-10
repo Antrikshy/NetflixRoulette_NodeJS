@@ -1,6 +1,10 @@
 NetflixRoulette Node.js API
 ===========================
 
+[![NPM Downloads](http://img.shields.io/npm/dm/netflix-roulette.svg?style=flat)](https://www.npmjs.org/package/netflix-roulette)
+[![NPM Version](https://img.shields.io/npm/v/netflix-roulette.svg?style=flat)](https://www.npmjs.org/package/netflix-roulette)
+[![License](http://img.shields.io/npm/l/express.svg?style=flat)](https://www.npmjs.org/package/netflix-roulette)
+
 A very simple, fully-functional Node wrapper for [NetflixRoulette's API](http://netflixroulette.net/api/) that I wrote for some practical experience with Node. Add this module as a dependency in your Node project to access NetflixRoulette with a few easy-to-use functions.
 
 Instructions
